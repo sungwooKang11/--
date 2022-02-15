@@ -1,0 +1,73 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    width: 100px; height: 40px;
+    background-color: darkgrey;
+    border-radius: 50px;
+}
+
+.toggle {
+    width: 34px; height: 34px;
+    background-color: rgb(200, 226, 52);
+    border-radius: 50px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(60px);
+    }
+}
+
+@keyframes return {
+    from {
+        transform: translateX(60px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes bgColor1 {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: rgb(52, 59, 66);
+    }
+}
+
+@keyframes bgColor2 {
+    from {
+        background-color: rgb(52, 59, 66);
+    }
+    to {
+        background-color: white;
+    }
+}
+
+.go {
+    animation: move 1s forwards;
+}
+
+.back {
+    animation: return 1s forwards;
+}
+
+.bgDark {
+    animation: bgColor1 1s forwards;
+}
+
+.bgWhite {
+    animation: bgColor2 1s forwards;
+}
